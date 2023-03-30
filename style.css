@@ -3,9 +3,7 @@ html {
   scroll-behavior: smooth;
 }
 
-@font-face {
-  font-family: Domine;
-  src: Domine-VariableFont_wght.ttf;}
+html,
 body {
   height: 100%;
   color: var(--font-color);
@@ -27,13 +25,15 @@ body {
 }
 
 h2 {
-  font-family: Domine;
+  font-family: "Domine";
+  src: Domine-VariableFont_wght.ttf;
   margin: 0;
   margin-bottom: var(--spacing-2);
 }
 
 body {
-  font-family: Domine;
+  font-family: "Domine";
+  src: Domine-VariableFont_wght.ttf;
   margin: 0;
   padding: 0 var(--spacing-3);
   max-width: 900px;
