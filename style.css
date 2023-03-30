@@ -1,16 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Gloock&display=swap');
+
+@font-face{
+  font-family: Domine;
+  src:url(Domine-VariableFont_wght.ttf);
+}
+
 html {
   scroll-behavior: smooth;
 }
 
-@font-face {
-  font-family: Domine;
-  src: Domine-VariableFont_wght.ttf;}
+html,
 body {
   height: 100%;
   color: var(--font-color);
   background-color: lavenderblush;
-
 }
 
 :root {
@@ -29,13 +32,13 @@ body {
 }
 
 h2 {
-  font-family: Domine;
+  font-family:Domine;
   margin: 0;
   margin-bottom: var(--spacing-2);
 }
 
 body {
-  font-family: Domine;
+  font-family:Domine;
   margin: 0;
   padding: 0 var(--spacing-3);
   max-width: 900px;
