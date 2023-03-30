@@ -5,9 +5,7 @@ html {
 
 @font-face {
   font-family: Domine;
-  src: Domine-VariableFont_wght.ttf;
-  html,
-
+  src: Domine-VariableFont_wght.ttf;}
 body {
   height: 100%;
   color: var(--font-color);
