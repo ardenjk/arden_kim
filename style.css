@@ -5,6 +5,10 @@
   src:url(Domine-VariableFont_wght.ttf);
 }
 
+* { 
+  box-sizing: border-box;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -27,9 +31,6 @@ body {
   --font-color: #323232;
 }
 
-.heart {
-  color: red;
-}
 
 h2 {
   font-family:Domine;
@@ -67,8 +68,10 @@ nav {
 }
 
 .portrait {
-  width: 400px;
-  border-radius: var(--border-radius);
+  width: 350px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 100%;
   flex-shrink: 0;
 }
 
@@ -94,8 +97,30 @@ nav {
   margin-right: var(--spacing-3);
 }
 
+#projects {
+  display: flex;
+  flex-direction: column;
+  gap: 10vw; /*only gives space for items in the flex  */
+}
+
+.project {
+  display: flex;
+}
+
+.projectText {
+  flex-basis: 50%;
+  padding-right: 10vw;
+}
+
 .project-image {
   width: 50%;
+  object-fit: contain;
+/*  height: unset;*/
+}
+
+.who_is_arden {
+  flex-basis: 50%;
+  padding-right: 10vw;
 }
 
 .project-image2{
@@ -104,6 +129,11 @@ nav {
 
 .project-title h3 {
   display: inline;
+}
+
+.projectText > h3 {
+  color: #777;
+  font-size: 0.75em;
 }
 
 details {
@@ -122,6 +152,11 @@ footer {
 
 section {
   padding: var(--spacing-3) 0;
+}
+
+.project-image2{
+  align-items: center;
+  justify-content: center;
 }
 
 .icon {
@@ -156,5 +191,10 @@ a {
 @media only screen and (max-width: 600px) {
   .about-me-container {
     flex-direction: column;
+  }
+  .portrait {
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    width: 100%;
   }
 }

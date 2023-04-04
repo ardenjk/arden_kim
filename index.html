@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Portfolio</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="./all.min.css" />
   </head>
@@ -20,7 +21,7 @@
     <main>
       <section id="about-me">
         <div class="about-me-container">
-          <div class="about-me-text-container">
+          <div data-aos="fade-right" data-aos-duration="3000"class="about-me-text-container">
             <h2>
               Hi there!
             </h2>
@@ -34,75 +35,73 @@
               Fun fact: I once was allergic to cashews but after eating them daily, I am no longer allergic (I love them!)
             </p>
           </div>
-          <img src="arden_portrait.jpg" alt="Picture" class="portrait"> 
+          <img data-aos="fade-left" data-aos-duration="3000" src="arden_portrait.jpg" alt="Picture" class="portrait"> 
         </div>
       </section>
 
+      <h2>Projects</h2>
+
       <section id="projects">
-        <h2>Projects</h2>
-        <details class="project">
-          <summary class="project-title">
-            <h3>Texas Gun Sense</h3>
-          </summary>
-          <img
+        <div data-aos="fade-right" class="project">
+          <div class="projectText">
+            <summary class="project-title">
+              <h3>Texas Gun Sense</h3>
+            </summary>
+            <h3>Web Redesign, UI/UX Design, Visual Design, Research, User Testing.</h3>
+            <p class="project-description">
+              The existing Texas Gun Law platform is cognitively complex, distracting, and overbearing. By shifting away the focus away from the visual UI and I wanted to build awareness towards educating the Texas community on gun law and safety. 
+            </p>
+          </div>
+          <img data-aos="fade-up" data-aos-duration="2000"
             src="texasgun.jpg"
             alt="Before and After website redesign"
             class="project-image"
           />
-          <h3>Web Redesign, UI/UX Design, Visual Design, Research, User Testing.</h3>
-          <p class="project-description">
-            The existing Texas Gun Law platform is cognitively complex, distracting, and overbearing. By shifting away the focus away from the visual UI and I wanted to build awareness towards educating the Texas community on gun law and safety. 
-          </p>
-        </details>
-        <details class="project">
+        </div>
+        <div data-aos="fade-right" class="project">
+          <div class="projectText">
           <summary class="project-title">
-            <h3>No Rest for Bridget</h3>
+              <h3>No Rest for Bridget</h3>
           </summary>
-          <img
-            src="No_Rest_for_Bridget.jpg"
-            alt="Website Redesign"
-            class="project-image"
-          />
           <h3>Web Redesign, UI/UX Research/Design.</h3>
           <p class="project-description">
             Without a user-friendly website, users are less likely to indulge in the process of online shopping. This process can often be the reason to why business’ online MRR (Monthly Recurring Revenue) is lower in comparison to in-store MRR. Also, some users tend to feel time-wasted when they have to search for hours to find a product that suits their needs. Our mission was to create a website that encourages for clienteles’ to have an overall enjoyable  online-shopping experience by redesigning and website and building a stronger online presence "
           </p>
-        </details>
-        <details class="project">
-          <summary class="project-title">
-            <h3>Roomies for Uni</h3>
-          </summary>
-          <img
+        </div>
+        <img data-aos="fade-up" data-aos-duration="2000"
+            src="No_Rest_for_Bridget.jpg"
+            alt="Website Redesign"
+            class="project-image"
+          />
+        </div>
+        <div data-aos="fade-right" class="project">
+          <div class="projectText">
+            <summary class="project-title">
+              <h3>Roomies for Uni</h3>
+            </summary>
+            <h3>Building mobile application [from scratch] </h3>
+            <p class="project-description">
+              “Helpful idea for college students who want to live off-campus”<br>
+              “Filters out individuals I would not have wanted to roomed with” <br>
+              “Personalized features and feels like a fun navigation around the vicinity” 
+            </p>
+        </div>
+          <img data-aos="fade-up" data-aos-duration="2000"
             src="roomiesforuni.jpg"
             alt='Mobile application for college students'
             class="project-image2"
           >
-          <h3>Building mobile application [from scratch] </h3>
-          <p class="project-description">
-            “Helpful idea for college students who want to live off-campus”<br>
-            “Filters out individuals I would not have wanted to roomed with” <br>
-            “Personalized features and feels like a fun navigation around the vicinity” 
-          </p>
-        </details>
+        </div>
       </section>
 
     </main>
 
   <footer>Currently based in NYC</footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   </body>
+
   <script>
-    const timeContainer = document.getElementById("time-container");
-    const BIRTH_DAY = "12-10-1815";
-    const BIRTH_DAY_DATE = new Date(BIRTH_DAY);
-    const intlNumberFormatter = new Intl.NumberFormat("en-US");
-
-    setInterval(() => {
-      const now = new Date();
-      const difference = Math.floor(
-        (now.getTime() - BIRTH_DAY_DATE.getTime()) / 1000
-      );
-
-      timeContainer.innerText = intlNumberFormatter.format(difference);
-    }, 1000);
+    AOS.init();
   </script>
 </html>
